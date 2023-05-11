@@ -11,6 +11,7 @@
 
 html {
     font-size: 62.5%;
+    background: black;
 }
 
 body {
@@ -18,16 +19,18 @@ body {
 }
 
 main {
-
+    
 }
 
 main input{
     width: 100%;
+    height: 10rem;
     font-size: 3.5rem;
-    margin-bottom:10px;
     background-color: black;
     color: green;
     text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 10px 4px 10px 4px;
     font-family: lcd;
     border: 1px solid yellow;
@@ -36,6 +39,26 @@ main input{
 
 main section#keyBoard {
     /** Grid eller liknade */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(10rem,auto);
+    grid-gap: 0.1rem;
+    grid-column: span 4;
+    padding: 0.2rem;
+}
+
+button{
+    border: 1px solid gray;
+    border-radius: 4px;
+    font-size: 4rem;
+}
+
+button:hover{
+    background-color: lightgray;
+}
+
+button#add, #sub, #mul, #comma, #enter, #div, #clear{
+    color: cyan;
 }
 
 @media (max-width: 767px) {
