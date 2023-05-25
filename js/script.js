@@ -45,12 +45,17 @@ function buttonClick(e) {
             case "clear": {
                 if(lcd.value === ""){
                     memClear();
-                    alert("Text Cleared")
                     break;
                 }
                 clearLCD();
                 break;
             }
+            case "enter":
+                calculate();
+                break;
+            default:
+                break;
+
             
         }
     }
@@ -81,7 +86,7 @@ function setOperator(operator){
         calculate();
     }
     else{
-        memory =parseFloat(lcd.value);
+        memory = parseFloat(lcd.value);
     }
     clearLCD();
     arithmetic = operator;
@@ -94,24 +99,24 @@ function calculate() {
     if(!arithmetic){
         return;
     }
-    let value = parseFloat;
+    let value = parseFloat(lcd.value);
     switch(arithmetic){
-        case "add":
+        case "+":
             memory += value;
             break;
-        case "sub":
+        case "-":
             memory -= value;
             break;
-        case "mul":
+        case "x":
             memory *= value;
             break;
-        case "div":
+        case "/":
             memory /= value;
             break;
         default:
             break;
     }
-    lcd.value = memory.toString();
+    lcd.value = memory.toFixed(2);
     arithmetic = null;
 }
 

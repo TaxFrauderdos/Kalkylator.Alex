@@ -14,14 +14,6 @@ html {
     background: black;
 }
 
-body {
-
-}
-
-main {
-    
-}
-
 main input{
     width: 100%;
     height: 10rem;
@@ -61,23 +53,3 @@ button#add, #sub, #mul, #comma, #enter, #div, #clear{
     color: cyan;
 }
 
-@media (max-width: 767px) {
-    body {
-
-    }
-
-    main {
-
-    }
-
-    main input{
-
-    }
-}
-
-@media (max-width: 339px) {
-    main {
-
-    }
-
-}
